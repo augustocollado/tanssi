@@ -49,7 +49,7 @@
 #![allow(unused_parens)]
 #![allow(unused_imports)]
 
-use frame_support::{traits::Get, weights::{Weight, constants::RocksDbWeight}};
+use frame_support::{traits::Get, weights::{Weight, constants::ParityDbWeight}};
 use sp_std::marker::PhantomData;
 
 /// Weight functions needed for pallet_xcm_core_buyer.
@@ -219,8 +219,8 @@ impl WeightInfo for () {
 		//  Estimated: `5203`
 		// Minimum execution time: 45_000_000 picoseconds.
 		Weight::from_parts(46_000_000, 5203)
-			.saturating_add(RocksDbWeight::get().reads(14_u64))
-			.saturating_add(RocksDbWeight::get().writes(6_u64))
+			.saturating_add(ParityDbWeight::get().reads(14_u64))
+			.saturating_add(ParityDbWeight::get().writes(6_u64))
 	}
 	/// Storage: `XcmCoreBuyer::QueryIdToParaId` (r:1 w:1)
 	/// Proof: `XcmCoreBuyer::QueryIdToParaId` (`max_values`: None, `max_size`: None, mode: `Measured`)
@@ -234,8 +234,8 @@ impl WeightInfo for () {
 		//  Estimated: `4686`
 		// Minimum execution time: 15_000_000 picoseconds.
 		Weight::from_parts(15_000_000, 4686)
-			.saturating_add(RocksDbWeight::get().reads(1_u64))
-			.saturating_add(RocksDbWeight::get().writes(3_u64))
+			.saturating_add(ParityDbWeight::get().reads(1_u64))
+			.saturating_add(ParityDbWeight::get().writes(3_u64))
 	}
 	/// Storage: `XcmCoreBuyer::InFlightOrders` (r:1000 w:1000)
 	/// Proof: `XcmCoreBuyer::InFlightOrders` (`max_values`: None, `max_size`: None, mode: `Measured`)
@@ -250,10 +250,10 @@ impl WeightInfo for () {
 		Weight::from_parts(13_000_000, 3684)
 			// Standard Error: 5_624
 			.saturating_add(Weight::from_parts(4_134_364, 0).saturating_mul(x.into()))
-			.saturating_add(RocksDbWeight::get().reads(1_u64))
-			.saturating_add(RocksDbWeight::get().reads((1_u64).saturating_mul(x.into())))
-			.saturating_add(RocksDbWeight::get().writes(2_u64))
-			.saturating_add(RocksDbWeight::get().writes((2_u64).saturating_mul(x.into())))
+			.saturating_add(ParityDbWeight::get().reads(1_u64))
+			.saturating_add(ParityDbWeight::get().reads((1_u64).saturating_mul(x.into())))
+			.saturating_add(ParityDbWeight::get().writes(2_u64))
+			.saturating_add(ParityDbWeight::get().writes((2_u64).saturating_mul(x.into())))
 			.saturating_add(Weight::from_parts(0, 2512).saturating_mul(x.into()))
 	}
 	/// Storage: `XcmCoreBuyer::PendingBlocks` (r:1000 w:1000)
@@ -267,10 +267,10 @@ impl WeightInfo for () {
 		Weight::from_parts(11_000_000, 3627)
 			// Standard Error: 1_312
 			.saturating_add(Weight::from_parts(2_640_131, 0).saturating_mul(x.into()))
-			.saturating_add(RocksDbWeight::get().reads(1_u64))
-			.saturating_add(RocksDbWeight::get().reads((1_u64).saturating_mul(x.into())))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
-			.saturating_add(RocksDbWeight::get().writes((1_u64).saturating_mul(x.into())))
+			.saturating_add(ParityDbWeight::get().reads(1_u64))
+			.saturating_add(ParityDbWeight::get().reads((1_u64).saturating_mul(x.into())))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().writes((1_u64).saturating_mul(x.into())))
 			.saturating_add(Weight::from_parts(0, 2499).saturating_mul(x.into()))
 	}
 	/// Storage: `XcmCoreBuyer::RelayXcmWeightConfig` (r:0 w:1)
@@ -281,7 +281,7 @@ impl WeightInfo for () {
 		//  Estimated: `0`
 		// Minimum execution time: 2_000_000 picoseconds.
 		Weight::from_parts(2_000_000, 0)
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 	/// Storage: `XcmCoreBuyer::RelayChain` (r:0 w:1)
 	/// Proof: `XcmCoreBuyer::RelayChain` (`max_values`: Some(1), `max_size`: None, mode: `Measured`)
@@ -291,6 +291,6 @@ impl WeightInfo for () {
 		//  Estimated: `0`
 		// Minimum execution time: 2_000_000 picoseconds.
 		Weight::from_parts(2_000_000, 0)
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 }

@@ -48,7 +48,7 @@
 #![allow(unused_parens)]
 #![allow(unused_imports)]
 
-use frame_support::{traits::Get, weights::{Weight, constants::RocksDbWeight}};
+use frame_support::{traits::Get, weights::{Weight, constants::ParityDbWeight}};
 use sp_std::marker::PhantomData;
 
 /// Weight functions needed for pallet_services_payment.
@@ -171,8 +171,8 @@ impl WeightInfo for () {
 		//  Estimated: `6196`
 		// Minimum execution time: 57_174_000 picoseconds.
 		Weight::from_parts(57_971_000, 6196)
-			.saturating_add(RocksDbWeight::get().reads(2_u64))
-			.saturating_add(RocksDbWeight::get().writes(2_u64))
+			.saturating_add(ParityDbWeight::get().reads(2_u64))
+			.saturating_add(ParityDbWeight::get().writes(2_u64))
 	}
 	/// Storage: `ServicesPayment::BlockProductionCredits` (r:0 w:1)
 	/// Proof: `ServicesPayment::BlockProductionCredits` (`max_values`: None, `max_size`: Some(24), added: 2499, mode: `MaxEncodedLen`)
@@ -182,7 +182,7 @@ impl WeightInfo for () {
 		//  Estimated: `0`
 		// Minimum execution time: 8_445_000 picoseconds.
 		Weight::from_parts(8_713_000, 0)
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 	/// Storage: `ServicesPayment::GivenFreeCredits` (r:0 w:1)
 	/// Proof: `ServicesPayment::GivenFreeCredits` (`max_values`: None, `max_size`: Some(20), added: 2495, mode: `MaxEncodedLen`)
@@ -192,7 +192,7 @@ impl WeightInfo for () {
 		//  Estimated: `0`
 		// Minimum execution time: 4_842_000 picoseconds.
 		Weight::from_parts(5_122_000, 0)
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 	/// Storage: `Registrar::RegistrarDeposit` (r:1 w:0)
 	/// Proof: `Registrar::RegistrarDeposit` (`max_values`: None, `max_size`: None, mode: `Measured`)
@@ -204,8 +204,8 @@ impl WeightInfo for () {
 		//  Estimated: `3660`
 		// Minimum execution time: 16_357_000 picoseconds.
 		Weight::from_parts(16_871_000, 3660)
-			.saturating_add(RocksDbWeight::get().reads(1_u64))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().reads(1_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 	/// Storage: `Registrar::RegistrarDeposit` (r:1 w:0)
 	/// Proof: `Registrar::RegistrarDeposit` (`max_values`: None, `max_size`: None, mode: `Measured`)
@@ -217,8 +217,8 @@ impl WeightInfo for () {
 		//  Estimated: `3660`
 		// Minimum execution time: 8_773_000 picoseconds.
 		Weight::from_parts(9_211_000, 3660)
-			.saturating_add(RocksDbWeight::get().reads(1_u64))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().reads(1_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 	/// Storage: `ServicesPayment::BlockProductionCredits` (r:1 w:0)
 	/// Proof: `ServicesPayment::BlockProductionCredits` (`max_values`: None, `max_size`: Some(24), added: 2499, mode: `MaxEncodedLen`)
@@ -230,8 +230,8 @@ impl WeightInfo for () {
 		//  Estimated: `3593`
 		// Minimum execution time: 24_336_000 picoseconds.
 		Weight::from_parts(24_786_000, 3593)
-			.saturating_add(RocksDbWeight::get().reads(2_u64))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().reads(2_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 	/// Storage: `ServicesPayment::CollatorAssignmentCredits` (r:1 w:0)
 	/// Proof: `ServicesPayment::CollatorAssignmentCredits` (`max_values`: None, `max_size`: Some(24), added: 2499, mode: `MaxEncodedLen`)
@@ -243,8 +243,8 @@ impl WeightInfo for () {
 		//  Estimated: `3593`
 		// Minimum execution time: 24_209_000 picoseconds.
 		Weight::from_parts(24_682_000, 3593)
-			.saturating_add(RocksDbWeight::get().reads(2_u64))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().reads(2_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 	/// Storage: `ServicesPayment::MaxTip` (r:0 w:1)
 	/// Proof: `ServicesPayment::MaxTip` (`max_values`: None, `max_size`: Some(36), added: 2511, mode: `MaxEncodedLen`)
@@ -254,6 +254,6 @@ impl WeightInfo for () {
 		//  Estimated: `0`
 		// Minimum execution time: 4_157_000 picoseconds.
 		Weight::from_parts(4_576_000, 0)
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 }

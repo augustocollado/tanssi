@@ -48,7 +48,7 @@
 #![allow(unused_parens)]
 #![allow(unused_imports)]
 
-use frame_support::{traits::Get, weights::{Weight, constants::RocksDbWeight}};
+use frame_support::{traits::Get, weights::{Weight, constants::ParityDbWeight}};
 use sp_std::marker::PhantomData;
 
 /// Weight functions needed for pallet_invulnerables.
@@ -142,8 +142,8 @@ impl WeightInfo for () {
 		Weight::from_parts(17_124_910, 4687)
 			// Standard Error: 1_519
 			.saturating_add(Weight::from_parts(76_594, 0).saturating_mul(b.into()))
-			.saturating_add(RocksDbWeight::get().reads(2_u64))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().reads(2_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 			.saturating_add(Weight::from_parts(0, 37).saturating_mul(b.into()))
 	}
 	/// Storage: `Invulnerables::Invulnerables` (r:1 w:1)
@@ -157,8 +157,8 @@ impl WeightInfo for () {
 		Weight::from_parts(10_574_224, 4687)
 			// Standard Error: 992
 			.saturating_add(Weight::from_parts(52_490, 0).saturating_mul(b.into()))
-			.saturating_add(RocksDbWeight::get().reads(1_u64))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().reads(1_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 	/// Storage: `Invulnerables::Invulnerables` (r:1 w:0)
 	/// Proof: `Invulnerables::Invulnerables` (`max_values`: Some(1), `max_size`: Some(3202), added: 3697, mode: `MaxEncodedLen`)
@@ -173,8 +173,8 @@ impl WeightInfo for () {
 		Weight::from_parts(7_742_784, 4687)
 			// Standard Error: 4_715
 			.saturating_add(Weight::from_parts(105_985, 0).saturating_mul(r.into()))
-			.saturating_add(RocksDbWeight::get().reads(2_u64))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().reads(2_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 	/// Storage: `Invulnerables::Invulnerables` (r:1 w:0)
 	/// Proof: `Invulnerables::Invulnerables` (`max_values`: Some(1), `max_size`: Some(3202), added: 3697, mode: `MaxEncodedLen`)
@@ -189,7 +189,7 @@ impl WeightInfo for () {
 		Weight::from_parts(19_797_082, 4687)
 			// Standard Error: 1_701
 			.saturating_add(Weight::from_parts(69_693, 0).saturating_mul(b.into()))
-			.saturating_add(RocksDbWeight::get().reads(2_u64))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().reads(2_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 }

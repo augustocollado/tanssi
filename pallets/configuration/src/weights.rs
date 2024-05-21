@@ -47,7 +47,7 @@
 #![allow(unused_parens)]
 #![allow(unused_imports)]
 
-use frame_support::{traits::Get, weights::{Weight, constants::RocksDbWeight}};
+use frame_support::{traits::Get, weights::{Weight, constants::ParityDbWeight}};
 use sp_std::marker::PhantomData;
 
 /// Weight functions needed for pallet_configuration.
@@ -93,7 +93,7 @@ impl WeightInfo for () {
 		//  Estimated: `6948`
 		// Minimum execution time: 9_507_000 picoseconds.
 		Weight::from_parts(9_924_000, 6948)
-			.saturating_add(RocksDbWeight::get().reads(4_u64))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().reads(4_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 }

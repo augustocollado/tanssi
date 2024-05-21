@@ -47,7 +47,7 @@
 #![allow(unused_parens)]
 #![allow(unused_imports)]
 
-use frame_support::{traits::Get, weights::{Weight, constants::RocksDbWeight}};
+use frame_support::{traits::Get, weights::{Weight, constants::ParityDbWeight}};
 use sp_std::marker::PhantomData;
 
 /// Weight functions needed for pallet_author_noting.
@@ -127,9 +127,9 @@ impl WeightInfo for () {
 		Weight::from_parts(7_985_000, 1912)
 			// Standard Error: 125_649
 			.saturating_add(Weight::from_parts(19_274_325, 0).saturating_mul(x.into()))
-			.saturating_add(RocksDbWeight::get().reads(4_u64))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
-			.saturating_add(RocksDbWeight::get().writes((1_u64).saturating_mul(x.into())))
+			.saturating_add(ParityDbWeight::get().reads(4_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().writes((1_u64).saturating_mul(x.into())))
 			.saturating_add(Weight::from_parts(0, 73).saturating_mul(x.into()))
 	}
 	/// Storage: AuthorNoting LatestAuthor (r:0 w:1)
@@ -140,7 +140,7 @@ impl WeightInfo for () {
 		//  Estimated: `0`
 		// Minimum execution time: 7_877_000 picoseconds.
 		Weight::from_parts(8_127_000, 0)
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 	/// Storage: AuthorNoting LatestAuthor (r:0 w:1)
 	/// Proof: AuthorNoting LatestAuthor (max_values: None, max_size: Some(56), added: 2531, mode: MaxEncodedLen)
@@ -150,6 +150,6 @@ impl WeightInfo for () {
 		//  Estimated: `0`
 		// Minimum execution time: 7_190_000 picoseconds.
 		Weight::from_parts(7_520_000, 0)
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 }

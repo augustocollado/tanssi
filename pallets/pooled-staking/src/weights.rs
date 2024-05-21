@@ -47,7 +47,7 @@
 #![allow(unused_parens)]
 #![allow(unused_imports)]
 
-use frame_support::{traits::Get, weights::{Weight, constants::RocksDbWeight}};
+use frame_support::{traits::Get, weights::{Weight, constants::ParityDbWeight}};
 use sp_std::marker::PhantomData;
 
 /// Weight functions needed for pallet_pooled_staking.
@@ -237,8 +237,8 @@ impl WeightInfo for () {
 		//  Estimated: `29536`
 		// Minimum execution time: 127_339_000 picoseconds.
 		Weight::from_parts(133_146_000, 29536)
-			.saturating_add(RocksDbWeight::get().reads(17_u64))
-			.saturating_add(RocksDbWeight::get().writes(9_u64))
+			.saturating_add(ParityDbWeight::get().reads(17_u64))
+			.saturating_add(ParityDbWeight::get().writes(9_u64))
 	}
 	/// Storage: PooledStaking PendingOperations (r:100 w:100)
 	/// Proof Skipped: PooledStaking PendingOperations (max_values: None, max_size: None, mode: Measured)
@@ -259,10 +259,10 @@ impl WeightInfo for () {
 		Weight::from_parts(91_417_000, 3593)
 			// Standard Error: 630_031
 			.saturating_add(Weight::from_parts(99_103_944, 0).saturating_mul(b.into()))
-			.saturating_add(RocksDbWeight::get().reads(3_u64))
-			.saturating_add(RocksDbWeight::get().reads((11_u64).saturating_mul(b.into())))
-			.saturating_add(RocksDbWeight::get().writes(2_u64))
-			.saturating_add(RocksDbWeight::get().writes((9_u64).saturating_mul(b.into())))
+			.saturating_add(ParityDbWeight::get().reads(3_u64))
+			.saturating_add(ParityDbWeight::get().reads((11_u64).saturating_mul(b.into())))
+			.saturating_add(ParityDbWeight::get().writes(2_u64))
+			.saturating_add(ParityDbWeight::get().writes((9_u64).saturating_mul(b.into())))
 			.saturating_add(Weight::from_parts(0, 25141).saturating_mul(b.into()))
 	}
 	/// Storage: PooledStaking Pools (r:13 w:9)
@@ -279,8 +279,8 @@ impl WeightInfo for () {
 		//  Estimated: `33889`
 		// Minimum execution time: 111_997_000 picoseconds.
 		Weight::from_parts(124_683_000, 33889)
-			.saturating_add(RocksDbWeight::get().reads(16_u64))
-			.saturating_add(RocksDbWeight::get().writes(11_u64))
+			.saturating_add(ParityDbWeight::get().reads(16_u64))
+			.saturating_add(ParityDbWeight::get().writes(11_u64))
 	}
 	/// Storage: PooledStaking Pools (r:300 w:100)
 	/// Proof Skipped: PooledStaking Pools (max_values: None, max_size: None, mode: Measured)
@@ -295,10 +295,10 @@ impl WeightInfo for () {
 		Weight::from_parts(60_814_000, 6196)
 			// Standard Error: 421_370
 			.saturating_add(Weight::from_parts(55_273_020, 0).saturating_mul(b.into()))
-			.saturating_add(RocksDbWeight::get().reads(2_u64))
-			.saturating_add(RocksDbWeight::get().reads((3_u64).saturating_mul(b.into())))
-			.saturating_add(RocksDbWeight::get().writes(2_u64))
-			.saturating_add(RocksDbWeight::get().writes((1_u64).saturating_mul(b.into())))
+			.saturating_add(ParityDbWeight::get().reads(2_u64))
+			.saturating_add(ParityDbWeight::get().reads((3_u64).saturating_mul(b.into())))
+			.saturating_add(ParityDbWeight::get().writes(2_u64))
+			.saturating_add(ParityDbWeight::get().writes((1_u64).saturating_mul(b.into())))
 			.saturating_add(Weight::from_parts(0, 7882).saturating_mul(b.into()))
 	}
 	/// Storage: PooledStaking Pools (r:4 w:1)
@@ -313,8 +313,8 @@ impl WeightInfo for () {
 		//  Estimated: `11870`
 		// Minimum execution time: 98_014_000 picoseconds.
 		Weight::from_parts(128_615_000, 11870)
-			.saturating_add(RocksDbWeight::get().reads(7_u64))
-			.saturating_add(RocksDbWeight::get().writes(4_u64))
+			.saturating_add(ParityDbWeight::get().reads(7_u64))
+			.saturating_add(ParityDbWeight::get().writes(4_u64))
 	}
 	/// Storage: PooledStaking Pools (r:600 w:100)
 	/// Proof Skipped: PooledStaking Pools (max_values: None, max_size: None, mode: Measured)
@@ -331,10 +331,10 @@ impl WeightInfo for () {
 		Weight::from_parts(60_293_000, 1881)
 			// Standard Error: 131_937
 			.saturating_add(Weight::from_parts(35_500_124, 0).saturating_mul(b.into()))
-			.saturating_add(RocksDbWeight::get().reads(1_u64))
-			.saturating_add(RocksDbWeight::get().reads((7_u64).saturating_mul(b.into())))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
-			.saturating_add(RocksDbWeight::get().writes((1_u64).saturating_mul(b.into())))
+			.saturating_add(ParityDbWeight::get().reads(1_u64))
+			.saturating_add(ParityDbWeight::get().reads((7_u64).saturating_mul(b.into())))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().writes((1_u64).saturating_mul(b.into())))
 			.saturating_add(Weight::from_parts(0, 15206).saturating_mul(b.into()))
 	}
 	/// Storage: PooledStaking Pools (r:12 w:8)
@@ -345,8 +345,8 @@ impl WeightInfo for () {
 		//  Estimated: `31168`
 		// Minimum execution time: 80_829_000 picoseconds.
 		Weight::from_parts(97_569_000, 31168)
-			.saturating_add(RocksDbWeight::get().reads(12_u64))
-			.saturating_add(RocksDbWeight::get().writes(8_u64))
+			.saturating_add(ParityDbWeight::get().reads(12_u64))
+			.saturating_add(ParityDbWeight::get().writes(8_u64))
 	}
 	/// Storage: PooledStaking Pools (r:9 w:5)
 	/// Proof Skipped: PooledStaking Pools (max_values: None, max_size: None, mode: Measured)
@@ -362,7 +362,7 @@ impl WeightInfo for () {
 		//  Estimated: `24567`
 		// Minimum execution time: 151_254_000 picoseconds.
 		Weight::from_parts(178_410_000, 24567)
-			.saturating_add(RocksDbWeight::get().reads(13_u64))
-			.saturating_add(RocksDbWeight::get().writes(8_u64))
+			.saturating_add(ParityDbWeight::get().reads(13_u64))
+			.saturating_add(ParityDbWeight::get().writes(8_u64))
 	}
 }

@@ -47,7 +47,7 @@
 #![allow(unused_parens)]
 #![allow(unused_imports)]
 
-use frame_support::{traits::Get, weights::{Weight, constants::RocksDbWeight}};
+use frame_support::{traits::Get, weights::{Weight, constants::ParityDbWeight}};
 use sp_std::marker::PhantomData;
 
 /// Weight functions needed for pallet_data_preservers.
@@ -97,7 +97,7 @@ impl WeightInfo for () {
 			.saturating_add(Weight::from_parts(7_964, 0).saturating_mul(x.into()))
 			// Standard Error: 3_552
 			.saturating_add(Weight::from_parts(334_296, 0).saturating_mul(y.into()))
-			.saturating_add(RocksDbWeight::get().reads(1_u64))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().reads(1_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 }

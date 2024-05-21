@@ -47,7 +47,7 @@
 #![allow(unused_parens)]
 #![allow(unused_imports)]
 
-use frame_support::{traits::Get, weights::{Weight, constants::RocksDbWeight}};
+use frame_support::{traits::Get, weights::{Weight, constants::ParityDbWeight}};
 use sp_std::marker::PhantomData;
 
 /// Weight functions needed for pallet_collator_assignment.
@@ -131,9 +131,9 @@ impl WeightInfo for () {
 			.saturating_add(Weight::from_parts(76_061, 0).saturating_mul(x.into()))
 			// Standard Error: 11_776
 			.saturating_add(Weight::from_parts(2_758_758, 0).saturating_mul(y.into()))
-			.saturating_add(RocksDbWeight::get().reads(8_u64))
-			.saturating_add(RocksDbWeight::get().reads((1_u64).saturating_mul(y.into())))
-			.saturating_add(RocksDbWeight::get().writes(4_u64))
+			.saturating_add(ParityDbWeight::get().reads(8_u64))
+			.saturating_add(ParityDbWeight::get().reads((1_u64).saturating_mul(y.into())))
+			.saturating_add(ParityDbWeight::get().writes(4_u64))
 			.saturating_add(Weight::from_parts(0, 2499).saturating_mul(y.into()))
 	}
 }

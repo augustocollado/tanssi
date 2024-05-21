@@ -51,7 +51,7 @@ use {
         },
         weights::{
             constants::{
-                BlockExecutionWeight, ExtrinsicBaseWeight, RocksDbWeight,
+                BlockExecutionWeight, ExtrinsicBaseWeight, ParityDbWeight,
                 WEIGHT_REF_TIME_PER_SECOND,
             },
             ConstantMultiplier, Weight, WeightToFeeCoefficient, WeightToFeeCoefficients,
@@ -332,7 +332,7 @@ impl frame_system::Config for Runtime {
     /// What to do if an account is fully reaped from the system.
     type OnKilledAccount = ();
     /// The weight of database operations that the runtime can invoke.
-    type DbWeight = RocksDbWeight;
+    type DbWeight = ParityDbWeight;
     /// The basic call filter to use in dispatchable.
     type BaseCallFilter = InsideBoth<MaintenanceMode, TxPause>;
     /// Weight information for the extrinsics of this pallet.

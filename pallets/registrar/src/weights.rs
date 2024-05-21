@@ -48,7 +48,7 @@
 #![allow(unused_parens)]
 #![allow(unused_imports)]
 
-use frame_support::{traits::Get, weights::{Weight, constants::RocksDbWeight}};
+use frame_support::{traits::Get, weights::{Weight, constants::ParityDbWeight}};
 use sp_std::marker::PhantomData;
 
 /// Weight functions needed for pallet_registrar.
@@ -288,8 +288,8 @@ impl WeightInfo for () {
 			.saturating_add(Weight::from_parts(751, 0).saturating_mul(x.into()))
 			// Standard Error: 16_331_035
 			.saturating_add(Weight::from_parts(115_744_655, 0).saturating_mul(z.into()))
-			.saturating_add(RocksDbWeight::get().reads(3_u64))
-			.saturating_add(RocksDbWeight::get().writes(4_u64))
+			.saturating_add(ParityDbWeight::get().reads(3_u64))
+			.saturating_add(ParityDbWeight::get().writes(4_u64))
 			.saturating_add(Weight::from_parts(0, 13).saturating_mul(y.into()))
 			.saturating_add(Weight::from_parts(0, 3).saturating_mul(z.into()))
 	}
@@ -321,8 +321,8 @@ impl WeightInfo for () {
 			.saturating_add(Weight::from_parts(2, 0).saturating_mul(x.into()))
 			// Standard Error: 87_727
 			.saturating_add(Weight::from_parts(372_523, 0).saturating_mul(y.into()))
-			.saturating_add(RocksDbWeight::get().reads(3_u64))
-			.saturating_add(RocksDbWeight::get().writes(8_u64))
+			.saturating_add(ParityDbWeight::get().reads(3_u64))
+			.saturating_add(ParityDbWeight::get().writes(8_u64))
 			.saturating_add(Weight::from_parts(0, 15).saturating_mul(y.into()))
 	}
 	/// Storage: `Registrar::PendingVerification` (r:1 w:0)
@@ -351,8 +351,8 @@ impl WeightInfo for () {
 			.saturating_add(Weight::from_parts(1, 0).saturating_mul(x.into()))
 			// Standard Error: 91_621
 			.saturating_add(Weight::from_parts(304_778, 0).saturating_mul(y.into()))
-			.saturating_add(RocksDbWeight::get().reads(7_u64))
-			.saturating_add(RocksDbWeight::get().writes(2_u64))
+			.saturating_add(ParityDbWeight::get().reads(7_u64))
+			.saturating_add(ParityDbWeight::get().writes(2_u64))
 			.saturating_add(Weight::from_parts(0, 4).saturating_mul(y.into()))
 	}
 	/// Storage: `Registrar::PendingVerification` (r:1 w:1)
@@ -378,8 +378,8 @@ impl WeightInfo for () {
 		Weight::from_parts(58_444_147, 4514)
 			// Standard Error: 202_350
 			.saturating_add(Weight::from_parts(578_764, 0).saturating_mul(y.into()))
-			.saturating_add(RocksDbWeight::get().reads(7_u64))
-			.saturating_add(RocksDbWeight::get().writes(4_u64))
+			.saturating_add(ParityDbWeight::get().reads(7_u64))
+			.saturating_add(ParityDbWeight::get().writes(4_u64))
 			.saturating_add(Weight::from_parts(0, 36).saturating_mul(y.into()))
 	}
 	/// Storage: `Registrar::PendingParaIds` (r:1 w:1)
@@ -397,8 +397,8 @@ impl WeightInfo for () {
 		Weight::from_parts(35_290_910, 1912)
 			// Standard Error: 50_241
 			.saturating_add(Weight::from_parts(104_888, 0).saturating_mul(y.into()))
-			.saturating_add(RocksDbWeight::get().reads(3_u64))
-			.saturating_add(RocksDbWeight::get().writes(2_u64))
+			.saturating_add(ParityDbWeight::get().reads(3_u64))
+			.saturating_add(ParityDbWeight::get().writes(2_u64))
 			.saturating_add(Weight::from_parts(0, 8).saturating_mul(y.into()))
 	}
 	/// Storage: `Registrar::PendingParaIds` (r:1 w:1)
@@ -416,8 +416,8 @@ impl WeightInfo for () {
 		Weight::from_parts(29_010_669, 1912)
 			// Standard Error: 39_979
 			.saturating_add(Weight::from_parts(267_751, 0).saturating_mul(y.into()))
-			.saturating_add(RocksDbWeight::get().reads(3_u64))
-			.saturating_add(RocksDbWeight::get().writes(2_u64))
+			.saturating_add(ParityDbWeight::get().reads(3_u64))
+			.saturating_add(ParityDbWeight::get().writes(2_u64))
 			.saturating_add(Weight::from_parts(0, 8).saturating_mul(y.into()))
 	}
 	/// Storage: `System::Account` (r:1 w:1)
@@ -443,8 +443,8 @@ impl WeightInfo for () {
 			.saturating_add(Weight::from_parts(722, 0).saturating_mul(x.into()))
 			// Standard Error: 15_908_841
 			.saturating_add(Weight::from_parts(112_465_553, 0).saturating_mul(z.into()))
-			.saturating_add(RocksDbWeight::get().reads(3_u64))
-			.saturating_add(RocksDbWeight::get().writes(5_u64))
+			.saturating_add(ParityDbWeight::get().reads(3_u64))
+			.saturating_add(ParityDbWeight::get().writes(5_u64))
 			.saturating_add(Weight::from_parts(0, 13).saturating_mul(y.into()))
 			.saturating_add(Weight::from_parts(0, 3).saturating_mul(z.into()))
 	}
@@ -461,7 +461,7 @@ impl WeightInfo for () {
 		//  Estimated: `3948`
 		// Minimum execution time: 19_970_000 picoseconds.
 		Weight::from_parts(23_219_566, 3948)
-			.saturating_add(RocksDbWeight::get().reads(3_u64))
-			.saturating_add(RocksDbWeight::get().writes(1_u64))
+			.saturating_add(ParityDbWeight::get().reads(3_u64))
+			.saturating_add(ParityDbWeight::get().writes(1_u64))
 	}
 }
